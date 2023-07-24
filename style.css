@@ -1,0 +1,511 @@
+:root {
+  --pink: #f14e95;
+  --bg: #0a0a0a;
+  --bg2: #11131e;
+  --primary: #b6895b;
+  --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Work Sans", sans-serif;
+  background-color: var(--bg2);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url(http://drive.google.com/uc?export=view&id=1LVsmb96dpQJk80KK26mpiTF5ubHb9mDd); */
+  /* Baris diatas untuk membuat image background dari google drive */
+  background-image: url(img/coba1.jpg);
+  z-index: -1;
+  background-size: cover;
+  /* Baris ini diatas dari kodingan pak dika, karena untuk membuat gambar background menjadi pas */
+  filter: grayscale();
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+}
+
+.hero h1,
+.hero h4,
+.hero p {
+  text-shadow: var(--shadow);
+}
+
+.hero h1 {
+  font-family: "Sacramento", cursive;
+  font-size: 6rem;
+}
+
+.hero h4 {
+  font-size: 1.6rem;
+}
+
+.hero p {
+  font-size: 1.4rem;
+}
+
+.hero a {
+  color: var(--pink);
+  background-color: white;
+  box-shadow: var(--shadow);
+}
+
+.hero a:hover {
+  background-color: var(--pink);
+  color: white;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 8%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+/* Section part 2 atau tengah */
+.p2 .content {
+  width: 100%;
+  margin: auto;
+}
+
+.p2 h1 {
+  color: #fff;
+  text-align: center;
+}
+
+.p2 .content .gallery {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+  margin: auto;
+}
+
+.p2 .content .gallery .galleryItem {
+  flex: 1 1 auto;
+  margin: 0.3em;
+  border: 1px solid black;
+  position: relative;
+  width: 12em;
+  height: 13em;
+  overflow: hidden;
+}
+
+.p2 .content .gallery .galleryItem:hover img {
+  transform: scale(1.2);
+}
+
+.p2 .content .gallery a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.p2 .content .gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.2s;
+}
+
+.p2 .content .gallery figcaption {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1em;
+}
+
+/* Bagian Light Box */
+/* .lightBoxOverlay .closeButton {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  color: #000;
+  background-color: #fff;
+  font-size: 1.5em;
+  border-radius: 1em;
+  padding: 0.44em 0.66em;
+  height: 2em;
+  width: 2em;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.lightBoxOverlay .closeButton:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.lightBoxOverlay .container {
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+}
+
+.lightBoxOverlay img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.lightBoxOverlay figcaption {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 5em;
+} */
+
+/* Section gift birthday */
+
+.hadiah {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  /* background-color: rgb(226, 218, 218); */
+}
+
+.birthday-gift {
+  position: relative;
+}
+
+.birthday-gift:before {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 90px;
+  left: -10px;
+}
+.gift {
+  position: relative;
+  width: 150px;
+  height: 100px;
+  background-color: #e9c46a;
+}
+
+.gift:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 100px;
+  background-color: #e76f51;
+  left: 62px;
+}
+
+.gift:after {
+  content: "";
+  position: absolute;
+  box-shadow: inset 0 10px rgba(0, 0, 0, 0.3);
+  width: 150px;
+  height: 100px;
+}
+input#click {
+  display: none;
+}
+.click {
+  position: absolute;
+  background-color: #e9c46a;
+  width: 170px;
+  height: 40px;
+  top: -40px;
+  left: -10px;
+  transform-origin: bottom left;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.click:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 40px;
+  background-color: #e76f51;
+  left: 69px;
+}
+
+.click:after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 0;
+  border-bottom: 30px solid #e76f51;
+  border-top: 30px solid #e76f51;
+  border-left: 0px solid transparent;
+  border-right: 30px solid transparent;
+  transform: rotate(-90deg);
+  left: 65px;
+  top: -47px;
+}
+.wishes {
+  position: absolute;
+  transition: 0.5s;
+  color: var(--primary);
+  font-size: 18px;
+  text-align: center;
+  z-index: -1;
+  left: 5px;
+}
+#click:checked + .click {
+  transform: rotate(-110deg) scaleX(0.85);
+}
+#click:checked ~ .wishes {
+  transform: translateY(-55px);
+}
+.sparkles {
+  position: absolute;
+  display: none;
+  top: -15px;
+  z-index: -2;
+  left: 40px;
+}
+
+.spark1,
+.spark2,
+.spark3,
+.spark4,
+.spark5,
+.spark6 {
+  position: absolute;
+  background-color: #fee440;
+  border-radius: 50%;
+  top: -9px;
+  z-index: -1;
+}
+
+.spark1 {
+  width: 8px;
+  height: 8px;
+  left: 30px;
+  top: -9px;
+  animation: fire 0.9s ease-in-out infinite, color 0.4s linear infinite;
+}
+
+.spark1:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 8px;
+  left: 11px;
+  background-color: #fee440;
+  border-radius: 50%;
+}
+
+.spark2 {
+  width: 9px;
+  height: 9px;
+  left: 33px;
+  top: -5px;
+  animation: fire2 0.28s ease-in-out infinite, color 0.4s linear infinite;
+}
+
+.spark2:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 12px;
+  left: 3px;
+  background-color: #fee440;
+  border-radius: 50%;
+}
+
+.spark3 {
+  width: 8.5px;
+  height: 8.5px;
+  left: 33px;
+  top: -5px;
+  animation: fire3 0.36s ease-in-out infinite, color2 0.4s linear infinite;
+}
+
+.spark3:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 12px;
+  left: -1px;
+  background-color: #fee440;
+  border-radius: 50%;
+}
+
+.spark4 {
+  width: 7px;
+  height: 7px;
+  left: 27px;
+  top: -5px;
+  animation: fire2 0.24s ease-in-out infinite, color2 0.2s linear infinite;
+}
+
+.spark5 {
+  width: 7px;
+  height: 7px;
+  left: 29px;
+  top: -5px;
+  animation: fire3 0.45s ease-in-out infinite, color 0.2s linear infinite;
+}
+
+.spark6 {
+  width: 6px;
+  height: 6px;
+  left: 29px;
+  top: -5px;
+  animation: fire 0.35s ease-in-out infinite, color2 0.2s linear infinite;
+}
+
+@keyframes fire3 {
+  100% {
+    /* transform: translateX(20px) translateY(-93px); */
+    transform: translateX(20px) translateY(-53px);
+    opacity: 0.3;
+  }
+}
+
+@keyframes fire2 {
+  100% {
+    /* transform: translateX(-5px) translateY(-90px); */
+    transform: translateX(-5px) translateY(-50px);
+    opacity: 0.3;
+  }
+}
+
+@keyframes fire {
+  100% {
+    /* transform: translateX(-25px) translateY(-95px); */
+    transform: translateX(-25px) translateY(-55px);
+    opacity: 0.3;
+  }
+}
+
+@keyframes color {
+  from {
+    background-color: #d00000;
+  }
+  to {
+    background-color: #0081a7;
+  }
+}
+
+@keyframes color2 {
+  from {
+    background-color: #8cff00;
+  }
+  to {
+    background-color: #1d2d44;
+  }
+}
+#click:checked ~ .sparkles {
+  display: block;
+}
+
+/* Footer - Credit */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 1rem;
+}
+
+footer .credit .isi-hati {
+  fill: red;
+}
+
+/* Media Query */
+/* laptop */
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+}
+
+/* mobile phone */
+@media (max-width: 576px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* Media Query khusus image gallery */
+@media (min-width: 40em) {
+  .p2 .content {
+    width: 40em;
+  }
+
+  .p2 .content .gallery .galleryItem {
+    width: 10em;
+    height: 10em;
+  }
+
+  /* .lightBoxOverlay .container {
+    padding: 3em;
+  } */
+}
+
+@media (min-width: 80em) {
+  .p2 .content {
+    width: 80em;
+  }
+
+  .p2 .content .gallery .galleryItem {
+    width: 17em;
+    height: 17em;
+  }
+
+  /* .lightBoxOverlay .closeButton {
+    font-size: 2em;
+    top: 1em;
+    right: 1em;
+    height: 2em;
+    width: 2em;
+  }
+
+  .lightBoxOverlay .container {
+    padding: 5em;
+  } */
+}
